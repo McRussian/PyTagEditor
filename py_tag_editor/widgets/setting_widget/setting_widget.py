@@ -1,9 +1,12 @@
-from PyQt5.QtWidgets import QWidget
+from typing import Dict
+
+from PyQt5.QtWidgets import QWidget, QLabel
 
 
-class SettingWidget(QWidget):
+class SettingsWidget(QWidget):
     def __init__(self):
-        super().__init__()
-        self.setMinimumSize(120, 440)
-
-        self.setStyleSheet('background-color: green;')
+        QWidget.__init__(self)
+        self.__widgets: Dict[str, QWidget]
+        self.__label = QLabel(self)
+        self.__label.setGeometry(20, 40, 120, 40)
+        self.__label.setText("It is Setting menu")

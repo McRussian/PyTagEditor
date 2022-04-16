@@ -1,1 +1,1 @@
-from .setting_widget import SettingWidget
+from .setting_widget import SettingsWidget
